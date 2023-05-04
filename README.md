@@ -30,3 +30,4 @@ Board:
 Recommended IDE : PyCharm
 
 Reference book : Python concurrency with asyncio by Matthew Fowler
+Important concepts : Event Loops. Threads. Processes. 
