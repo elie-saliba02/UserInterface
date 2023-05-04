@@ -17,9 +17,11 @@ Flash Blinky Example on peripheral device. Compile the python project, scan, con
 Libraries : Bleak, Asyncio, PyQt5
 
 GUI:
+
 <img width="251" alt="Screen Shot 2023-05-04 at 3 19 43 PM" src="https://user-images.githubusercontent.com/113550223/236309644-2f8f871a-882f-4cd0-aac1-fdf41da5979c.png">
 
 Board:
+
 <img width="685" alt="Screen Shot 2023-05-04 at 3 27 29 PM" src="https://user-images.githubusercontent.com/113550223/236309691-10fecdff-3719-425f-97d9-e5ee8a9c0b8b.png">
 
 Optional : Connect an LED to Pins 8 and gnd. 
