@@ -12,7 +12,8 @@ Send data to the openPHM project. Chapter 9 (Python concurrency with Asyncio)
 Scan for multiple devices with a specific UUID. Allow the gateway to connect to multiple devices at the same time. This can be done by giving each connection its own process to run in. The User Interface can run in the main process, that creates a sub-process for each connection. Subprocess creates a thread for the BLE conncetion, and another one for the cloud data upload. That requires us to find a way to communicate between processes.
 
 Demo:
-Flash Blinky Example on peripheral device. Compile the python project, scan, connect, and toggle LED button to watch the LED0 on board turn ON and OFF. 
+Flash Blinky Example on peripheral device. Compile the python project, scan, connect, and toggle LED button to watch the LED0 on board turn ON and OFF.
+Optional : Connect an LED to Pins 8 and gnd. 
 
 Libraries : Bleak, Asyncio, PyQt5
 
@@ -24,7 +25,6 @@ Board:
 
 <img width="685" alt="Screen Shot 2023-05-04 at 3 27 29 PM" src="https://user-images.githubusercontent.com/113550223/236309691-10fecdff-3719-425f-97d9-e5ee8a9c0b8b.png">
 
-Optional : Connect an LED to Pins 8 and gnd. 
 
 
 Recommended IDE : PyCharm
