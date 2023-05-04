@@ -14,6 +14,8 @@ Need to build a GATT profile on the peripheral device and make it compatible wit
 
 Send data to the openPHM project. Chapter 9 (Python concurrency with Asyncio) 
 
-Allow the gateway to connect to multiple server devices at the same time. This can be done by giving each connection its own process to run in. The User Interface can run in the main process, that creates a sub-process for each connection. Subprocess creates a thread for the BLE conncetion, and another one for the cloud data upload. That require us to find a way to communicate between processes. 
+Allow the gateway to connect to multiple server devices at the same time. This can be done by giving each connection its own process to run in. The User Interface can run in the main process, that creates a sub-process for each connection. Subprocess creates a thread for the BLE conncetion, and another one for the cloud data upload. That require us to find a way to communicate between processes.
+
+Recommended IDE : PyCharm
 
 Reference book : Python concurrency with asyncio by Matthew Fowler
