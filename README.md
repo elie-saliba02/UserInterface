@@ -17,6 +17,8 @@ Flash Blinky Example on peripheral device. Compile the python project, scan, con
 Libraries : Bleak, Asyncio, PyQt5
 
 What is an event loop?
+![EventLoop](https://user-images.githubusercontent.com/113550223/236305359-fac33f82-4b91-4c47-92b9-5c39b8740b5e.png)
+
 
 Recommended IDE : PyCharm
 
