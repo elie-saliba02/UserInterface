@@ -16,13 +16,14 @@ Flash Blinky Example on peripheral device. Compile the python project, scan, con
 
 Libraries : Bleak, Asyncio, PyQt5
 
-Event Loop:
+GUI:
+<img width="251" alt="Screen Shot 2023-05-04 at 3 19 43 PM" src="https://user-images.githubusercontent.com/113550223/236309644-2f8f871a-882f-4cd0-aac1-fdf41da5979c.png">
 
-![EventLoop](https://user-images.githubusercontent.com/113550223/236305359-fac33f82-4b91-4c47-92b9-5c39b8740b5e.png)
+Board:
+<img width="685" alt="Screen Shot 2023-05-04 at 3 27 29 PM" src="https://user-images.githubusercontent.com/113550223/236309691-10fecdff-3719-425f-97d9-e5ee8a9c0b8b.png">
 
-Processes and Threads:
+Optional : Connect an LED to Pins 8 and gnd. 
 
-<img width="422" alt="Screen Shot 2023-05-04 at 3 12 31 PM" src="https://user-images.githubusercontent.com/113550223/236305654-62ce7f95-3c03-47e0-9824-4ae31d02984b.png">
 
 Recommended IDE : PyCharm
 
