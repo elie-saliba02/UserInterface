@@ -13,7 +13,7 @@ Scan for multiple devices with a specific UUID. Allow the gateway to connect to 
 
 Demo:
 Flash Blinky Example on peripheral device. Compile the python project, scan, connect, and toggle LED button to watch the LED0 on board turn ON and OFF.
-Optional : Connect an LED to Pins 8 and gnd. 
+Optional : Connect an LED to Pins 8 and Gnd. 
 
 Libraries : Bleak, Asyncio, PyQt5
 
