@@ -11,10 +11,12 @@ Need to build a GATT profile on the peripheral device and make it compatible wit
 Send data to the openPHM project. Chapter 9 (Python concurrency with Asyncio) 
 Scan for multiple devices with a specific UUID. Allow the gateway to connect to multiple devices at the same time. This can be done by giving each connection its own process to run in. The User Interface can run in the main process, that creates a sub-process for each connection. Subprocess creates a thread for the BLE conncetion, and another one for the cloud data upload. That require us to find a way to communicate between processes.
 
-Libraries : bleak, asyncio, PyQt5
+Demo:
+Flash Blinky Example on peripheral device. Compile the python project, scan, connect, and toggle LED button to watch the LED on the board turn ON and OFF. 
 
-What is an event loop? 
+Libraries : Bleak, Asyncio, PyQt5
 
+What is an event loop?
 
 Recommended IDE : PyCharm
 
