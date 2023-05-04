@@ -1,4 +1,4 @@
-# UserInterface
+# User Interface
 User Interface for SsMachMo 
 
 Current State of the project :
