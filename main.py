@@ -1,3 +1,4 @@
+#soc_thermometer
 import asyncio
 import sys
 from queue import Queue
