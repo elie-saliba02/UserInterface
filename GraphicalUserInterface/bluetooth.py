@@ -24,8 +24,8 @@ class BLE:
         else:
             devices = await BleakScanner.discover(timeout=timeout)
         for device in devices:
-            if str(device)[:8] == "C4EBA289" or str(device)[:8] == "153E524C":
-                filtered_devices.append(device)
+            #if str(device)[:8] == "C4EBA289" or str(device)[:8] == "153E524C":
+            filtered_devices.append(device)
         self.callback(filtered_devices)
 
     def connect(self, address, callback_connected):

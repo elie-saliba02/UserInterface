@@ -18,9 +18,18 @@ import scipy.io.wavfile as wf
 import soundfile
 import pygame
 import time
-import os
+import sys, os
 
 RATE = 2500
+
+def resource_path(relative_path):
+    """ Get absolute path to resource, works for dev and PyInstaller """
+    if getattr(sys, 'frozen', False):
+        # PyInstaller stores temp folder path here
+        base_path = sys._MEIPASS
+    else:
+        base_path = os.path.abspath(".")
+    return os.path.join(base_path, relative_path)
 
 class MainWindow(QMainWindow):
     def __init__(self, queue, ble_handle, app, device_list):
@@ -29,7 +38,7 @@ class MainWindow(QMainWindow):
         # self.mainlayout.setSpacing(0)
 
         self.movie_label = QLabel(self)
-        self.movie = QMovie("assets/spinner.gif")
+        self.movie = QMovie(resource_path("assets/spinner.gif"))
         self.layout = QStackedLayout()
 
         self.mainwidget = QWidget()
@@ -175,7 +184,7 @@ class MainWindow(QMainWindow):
         self.backbutton.move(10, 10)
         self.backbutton.setStyleSheet("background-color: transparent;")
         self.backbutton.setFixedSize(80, 20)
-        back_button_image = "assets/back_arrow.png"
+        back_button_image = resource_path("assets/back_arrow.png")
         '''
         back_text = QLabel(self.backbutton)
         back_text.setText("Devices")
@@ -315,10 +324,11 @@ class MainWindow(QMainWindow):
 
     def pack_device(self, device):
         present = False
-        name = str(device)[38:]
-        uuid = str(device)[:36]
+        name = str(device)[19:]
+        uuid = str(device)[:17]
         status = False
         device_info = dict(name=name, uuid=uuid, status=status)
+        print(f"device info is : {device_info}")
         # Do not append or add device if already present
         for i in self.device_list:
             if i.get("uuid") == device_info.get("uuid"):
@@ -385,7 +395,7 @@ class DeviceTab(QPushButton):
         widget = QWidget()
         widget.setFixedHeight(50)
 
-        image = "assets/bee.png"
+        image = resource_path("assets/bee.png")
         try:
             with open(image):
                 bee_image = QLabel(widget)
@@ -410,7 +420,7 @@ class DeviceTab(QPushButton):
         self.middle_down.setFixedSize(1000, 20)
         self.middle_down.move(60, 14)  # h v
 
-        black_logo_image = "assets/settings_gray.png"
+        black_logo_image = resource_path("assets/settings_gray.png")
         try:
             with open(black_logo_image):
                 self.right_logo = QLabel(widget)
@@ -476,7 +486,7 @@ class DeviceTab(QPushButton):
             self.middle_down.setStyleSheet("color: rgb(192, 192, 192); font-family: Helvetica Neue; font-size: 11px;")
             self.middle_up.setStyleSheet("color: black;")
 
-            black_logo_image = "assets/settings_gray.png"
+            black_logo_image = resource_path("assets/settings_gray.png")
             try:
                 with open(black_logo_image):
                     right_pixmap = QPixmap(black_logo_image)
@@ -492,7 +502,7 @@ class DeviceTab(QPushButton):
             self.middle_down.setStyleSheet("color: white; font-family: Helvetica Neue; font-size: 11px;")
             self.middle_up.setStyleSheet("color: white;")
 
-            white_logo_image = "assets/settings_white.png"
+            white_logo_image = resource_path("assets/settings_white.png")
             try:
                 with open(white_logo_image):
                     right_pixmap = QPixmap(white_logo_image)
